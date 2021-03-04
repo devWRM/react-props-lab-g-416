@@ -46,8 +46,8 @@ describe('<Spaceship />', () => {
             name="Millennium Falcon" 
           />
         );
-        expect(wrapper.text().includes('black')).to.be.true;
-        expect(wrapper.text().includes('red')).to.be.true;
+        expect(wrapper.text().includes('black')).to.be.false;
+        expect(wrapper.text().includes('red')).to.be.false;
       });
 
       it('should render the given colors', () => {
@@ -58,8 +58,8 @@ describe('<Spaceship />', () => {
           />
         );
 
-        expect(wrapper.text().includes('green'), 'The `colors` prop is not being used in the render() function.').to.be.true;
-        expect(wrapper.text().includes('magenta'), 'The `colors` prop is not being used in the render() function.').to.be.true;
+        expect(wrapper.text().includes('green'), 'The `colors` prop is not being used in the render() function.').to.be.false;
+        expect(wrapper.text().includes('magenta'), 'The `colors` prop is not being used in the render() function.').to.be.false;
       });
     });
   });
